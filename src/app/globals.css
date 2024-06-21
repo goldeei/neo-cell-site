@@ -14,3 +14,23 @@ section {
 		clip-path: polygon(100% 100%, 0 100%, 0 0, 100% 0, 70% 30%, 70% 70%);
 	}
 }
+
+.video-radial {
+	background-image: radial-gradient(
+		at 50% 0,
+		#e2ebf5 0%,
+		#dae5f1 25%,
+		#c1d3e7 50%,
+		#b0c7e1 60%
+	);
+}
+
+.video-linear-grd {
+	background-image: linear-gradient(
+		to bottom,
+		#bfd1e5 20%,
+		#b6cbe2 40%,
+		#a7c1dd 60%,
+		#90acd1 90%
+	);
+}
