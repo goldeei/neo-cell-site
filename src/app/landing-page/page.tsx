@@ -20,9 +20,9 @@ export const LandingPage = () => {
 
 	return (
 		<div className="relative flex justify-center overflow-hidden h-svh w-svw">
-			<div className="absolute top-0 left-0 w-full h-full video-linear-grd -z-50" />
+			<div className="absolute top-0 left-0 w-full h-full z-10" />
 			<video
-				className={`h-full w-full min-w-[1360px] object-cover`}
+				className={`h-full w-full min-w-[1360px] object-cover z-0 brightness-110 saturate-[1.3]`}
 				autoPlay
 				loop
 				muted
@@ -34,9 +34,18 @@ export const LandingPage = () => {
 			>
 				<source src="/NeoCellLandingPage.mp4" type="video/mp4" />
 			</video>
-			<div className="absolute h-svh w-svw top-0 left-0 flex items-center justify-center">
-				<div className="text-center text-3xl w-full px-12">
-					Unlocking Clinical Support using PET-enabled therapies
+			<div
+				className="absolute h-svh w-svw top-0 left-0 flex flex-col items-center justify-center z-20 gap-4 "
+				style={{ color: "#07338C" }}
+			>
+				<div className="flex flex-col justify-center items-center gap-4 max-w-[1920px]">
+					<div className="text-center lg:text-[3svw] w-full px-6 font-medium tracking-tighter leading-tight">
+						Unlocking Clinical Support <br></br>using PET-enabled therapies
+					</div>
+					<div className="text-xl text-center lg:text-[2svw] leading-tight">
+						Access new data to monitor patients and <br></br>evaluate cell and
+						gene therapies
+					</div>
 				</div>
 			</div>
 		</div>
