@@ -1,4 +1,4 @@
-import SvgHexCells from '@/svg-components/HexCells';
+import SvgHexCells from '@/components/svg-components/HexCells';
 import cn from '@/utilities/cn';
 
 const Hexagon = ({
