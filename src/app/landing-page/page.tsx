@@ -19,7 +19,10 @@ export const LandingPage = () => {
 	}, [width]);
 
 	return (
-		<section className="landing-page relative flex flex-col justify-center">
+		<section
+			id="landing-page"
+			className="landing-page relative flex flex-col justify-center"
+		>
 			<div className="text-center lg:text-[3svw] w-full px-6 font-medium tracking-tighter leading-tight">
 				Unlocking Clinical Support <br></br>using PET-enabled therapies
 			</div>
