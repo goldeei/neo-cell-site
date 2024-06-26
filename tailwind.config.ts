@@ -24,6 +24,9 @@ const config: Config = {
 				"sky-blue": {
 					500: "#E0F0FF",
 				},
+				"header-blue": {
+					500: "#07338C",
+				},
 			},
 			backgroundImage: {
 				"gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
