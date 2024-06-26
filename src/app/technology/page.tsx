@@ -1,5 +1,8 @@
+"use client";
+
 import SvgHexCells from '@/components/svg-components/HexCells';
 import cn from '@/utilities/cn';
+import { motion } from 'framer-motion';
 
 const Hexagon = ({
 	children,
@@ -22,7 +25,7 @@ const Hexagon = ({
 
 export const Technology = () => {
 	return (
-		<section className="page-gradient flex items-center">
+		<motion.section id="technology" className="page-gradient flex items-center">
 			<div className="max-w-svw flex items-center overflow-hidden">
 				<div className="flex-1 flex flex-col gap-12">
 					<div className="text-6xl text-header-blue-500">TECHNOLOGY</div>
@@ -41,6 +44,6 @@ export const Technology = () => {
 					<SvgHexCells />
 				</div>
 			</div>
-		</section>
+		</motion.section>
 	);
 };
