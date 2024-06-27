@@ -11,13 +11,9 @@ export const NavBar = () => {
 
 	const { width = 0 } = useWindowSize();
 
-	useEffect(() => {
-		console.log(activeLink);
-	}, [activeLink]);
-
 	return (
 		<nav className="sticky top-0 z-50 shadow-lg border border-white w-full px-4 py-2 bg-gradient-to-b from-white/80 to-white/60 backdrop-blur-[6px]">
-			<div className="max-w-[1920px] h-14 mx-auto flex justify-between items-center">
+			<div className="page-width h-14 mx-auto flex justify-between items-center">
 				<a
 					href="#landing-page"
 					className="h-full w-fit"
@@ -25,26 +21,26 @@ export const NavBar = () => {
 				>
 					<img src={"/NeoCellLogo.png"} className="h-full w-full" />
 				</a>
-				{width > 500 && (
-					<ul className="flex justify-between items-center gap-8">
-						<NavItem
-							onSetLink={setActiveLink}
-							isActive={activeLink === "#technology"}
-							label="Technology"
-							link="#technology"
-						/>
-						<NavItem
-							onSetLink={setActiveLink}
-							isActive={activeLink === "#about"}
-							label="About"
-							link="#about"
-						/>
-						<NavItem
-							onSetLink={setActiveLink}
-							isActive={activeLink === "#meet-the-team"}
-							label="Meet The Team"
-							link="#meet-the-team"
-						/>
+				<ul className="flex justify-between items-center gap-8">
+					<NavItem
+						onSetLink={setActiveLink}
+						isActive={activeLink === "#about"}
+						label="About"
+						link="#about"
+					/>
+					<NavItem
+						onSetLink={setActiveLink}
+						isActive={activeLink === "#technology"}
+						label="Technology"
+						link="#technology"
+					/>
+					<NavItem
+						onSetLink={setActiveLink}
+						isActive={activeLink === "#meet-the-team"}
+						label="Meet The Team"
+						link="#meet-the-team"
+					/>
+					<li>
 						<motion.a
 							aria-label="Send mail"
 							href="mailto: mail@mail.com"
@@ -56,8 +52,8 @@ export const NavBar = () => {
 						>
 							Contact Us
 						</motion.a>
-					</ul>
-				)}
+					</li>
+				</ul>
 			</div>
 		</nav>
 	);
