@@ -12,11 +12,11 @@ section {
 	overflow-x: hidden;
 }
 
-section:not(.landing-page) {
+section:not(#landing-page) {
 	display: flex;
 	justify-content: center;
 }
-section:not(.landing-page) > div {
+section:not(#landing-page) > div {
 	max-width: 1920px;
 	width: 100%;
 	overflow: hidden;
