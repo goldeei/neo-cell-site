@@ -25,10 +25,7 @@ const Hexagon = ({
 
 export const Technology = () => {
 	return (
-		<motion.section
-			id="technology"
-			className="page-gradient flex  justify-around"
-		>
+		<motion.section id="technology" className=" flex justify-around">
 			<div className="max-w-svw flex flex-col  justify-around"></div>
 		</motion.section>
 	);
