@@ -1,12 +1,13 @@
 export const About = () => {
 	return (
 		<section id="about" className="page-gradient">
-			<div className="flex flex-col md:flex-row items-center justify-around gap-24">
-				<div className="flex flex-col gap-12 max-w-[900px]">
+			{/* <div className="flex flex-col md:flex-row items-center justify-around gap-24"> */}
+			<div className="flex flex-col justify-between lg:grid gap-auto lg:grid-cols-6 lg:grid-rows-1 items-center">
+				<div className="lg:col-span-4 flex flex-col gap-12">
 					<div className="text-header-blue-500 text-7xl">
 						Revolutionizing Cell Therapy Monitoring & Analysis
 					</div>
-					<div className="text-3xl">
+					<div className="text-2xl">
 						By leveraging PET reporter technology, our innovative approach
 						enables early detection of low efficacy or high toxicity throughout
 						clinical development and patient treatment. PET-CT scans help
@@ -18,8 +19,8 @@ export const About = () => {
 						medical research and enhancing patient outcomes.
 					</div>
 				</div>
-				<div className="max-h-full grid gap-1 md:gap-12 grid-cols-3 md:grid-cols-1 md:grid-rows-3 md:w-1/5">
-					<div className="relative -translate-x-2/3">
+				<div className="h-full items-center lg:h-fit grid gap-1 grid-cols-3 lg:grid-cols-1 lg:grid-rows-3 lg:col-start-6">
+					<div className="relative lg:-translate-x-1/2">
 						<img
 							src="/Frame 25.png"
 							alt=""
@@ -39,7 +40,7 @@ export const About = () => {
 							ICON
 						</div>
 					</div>
-					<div className="relative -translate-x-2/3">
+					<div className="relative lg:-translate-x-1/2">
 						<img
 							src="/Frame 25.png"
 							alt=""
