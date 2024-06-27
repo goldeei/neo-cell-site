@@ -11,8 +11,8 @@ export default function Home() {
 			<NavBar />
 			<LandingVid />
 			<LandingPage />
-			<Technology />
 			<About />
+			<Technology />
 		</div>
 	);
 }
