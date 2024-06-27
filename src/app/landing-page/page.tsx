@@ -1,34 +1,40 @@
-"use client";
+import cn from '@/utilities/cn';
 
-import { useEffect, useRef, useState } from 'react';
-import { useWindowSize } from 'usehooks-ts';
+const TEXT_CLASSES = {
+	container: "w-full flex flex-col gap-4 lg:gap-8 justify-center items-center",
+	base: "text-center text-header-blue-500 leading-tight  drop-shadow-md",
+	title: {
+		base: "tracking-tighter",
+		default: "text-[10svw] w-full font-medium",
+		sm: "sm:text-[8svw] sm:w-[650px]",
+		md: "md:text-[6svw] md:w-[650px]",
+		lg: "lg:text-6xl lg:w-[800px]",
+	},
+	subtitle: {
+		default: "text-[8svw] w-full drop-shadow-md",
+		sm: "sm:text-[6svw] sm:w-[650px]",
+		md: "md:text-[4svw] md:w-[650px]",
+		lg: "lg:text-4xl lg:w-[800px]",
+	},
+};
 
 export const LandingPage = () => {
-	const { width = 0 } = useWindowSize();
-	const [translateX, setTranslateX] = useState(0);
-
-	const videoRef = useRef<HTMLVideoElement>(null);
-
-	useEffect(() => {
-		if (width < 1360 && videoRef.current) {
-			const videoWidth = videoRef.current?.getBoundingClientRect().width;
-			setTranslateX(((width - videoWidth) * -1) / 2);
-		} else {
-			setTranslateX(0);
-		}
-	}, [width]);
+	const { title, subtitle } = TEXT_CLASSES;
 
 	return (
 		<section
 			id="landing-page"
-			className="landing-page relative flex flex-col justify-center"
+			className={cn(TEXT_CLASSES.container, TEXT_CLASSES.base)}
 		>
-			<div className="text-center lg:text-[3svw] w-full px-6 font-medium tracking-tighter leading-tight">
-				Unlocking Clinical Support <br></br>using PET-enabled therapies
+			<div
+				className={cn(title.base, title.default, title.sm, title.md, title.lg)}
+			>
+				Unlocking Clinical Support using PET-enabled therapies
 			</div>
-			<div className="text-xl text-center lg:text-[2svw] leading-tight">
-				Access new data to monitor patients and <br></br>evaluate cell and gene
-				therapies
+			<div
+				className={cn(subtitle.default, subtitle.sm, subtitle.md, subtitle.lg)}
+			>
+				Access new data to monitor patients and evaluate cell and gene therapies
 			</div>
 		</section>
 	);
