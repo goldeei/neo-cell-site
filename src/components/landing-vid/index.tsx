@@ -4,32 +4,44 @@ import { motion, useMotionValueEvent, useScroll } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
 import { useWindowSize } from 'usehooks-ts';
 
+const setOpacity = (opac1: number, opac2: number) => Math.max(opac1, opac2);
+
 export const LandingVid = () => {
 	const { scrollYProgress } = useScroll();
+	const [opacityByWidth, setOpacityByWidth] = useState(0);
+	const [opacityByScroll, setOpacityByScroll] = useState(0);
 	const [coverOpacity, setCoverOpacity] = useState(0);
 
-	const { width = 0 } = useWindowSize();
+	const { width } = useWindowSize();
 	const [translateX, setTranslateX] = useState(0);
 
 	const videoRef = useRef<HTMLVideoElement>(null);
 
-	useMotionValueEvent(scrollYProgress, "change", (latest) => {
-		setCoverOpacity(latest * 2 + 0.1);
+	useMotionValueEvent(scrollYProgress, "change", (latest): void => {
+		const opacity = latest * 2 + 0.1;
+		setOpacityByScroll(opacity);
 	});
 
 	useEffect(() => {
 		if (width < 1360 && videoRef.current) {
 			const videoWidth = videoRef.current?.getBoundingClientRect().width;
 			setTranslateX(((width - videoWidth) * -1) / 2);
+			const opacity = translateX / 1000;
+			setOpacityByWidth(opacity + 0.2);
 		} else {
 			setTranslateX(0);
 		}
-	}, [width]);
+	}, [width, videoRef.current]);
+
+	useEffect(() => {
+		const maxOpacity = Math.max(opacityByWidth, opacityByScroll);
+		setCoverOpacity(maxOpacity);
+	}, [opacityByWidth, opacityByScroll]);
 
 	return (
 		<div className="fixed top-0 left-0 landing-page flex justify-center h-svh w-svw -z-50">
 			<div
-				className="absolute top-0 left-0 h-full w-full bg-white backdrop-blur-sm"
+				className="fixed top-0 left-0 h-full w-full bg-sky-50 backdrop-blur-lg"
 				style={{ opacity: coverOpacity }}
 			/>
 			{coverOpacity < 1 && (
@@ -43,7 +55,7 @@ export const LandingVid = () => {
 					muted
 					preload="auto"
 					style={{
-						transform: `translateX(${translateX}px)`,
+						x: translateX,
 					}}
 					ref={videoRef}
 				>
