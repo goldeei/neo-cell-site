@@ -18,9 +18,10 @@ section:not(#landing-page) {
 }
 section:not(#landing-page) > div {
 	max-width: 1920px;
+	padding: 0 2rem;
 	width: 100%;
 	overflow: hidden;
-	margin-top: 160px;
+	margin-top: 56px;
 }
 
 @layer utilities {
@@ -58,4 +59,8 @@ section:not(#landing-page) > div {
 
 .video-shadow {
 	box-shadow: 0px 20px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.page-width {
+	max-width: 1920px;
 }
