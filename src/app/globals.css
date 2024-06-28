@@ -18,10 +18,9 @@ section:not(#landing-page) {
 }
 section:not(#landing-page) > div {
 	max-width: 1920px;
-	padding: 0 4rem;
+	padding: 0 2rem;
 	width: 100%;
 	overflow: hidden;
-	margin-top: 56px;
 }
 
 @layer utilities {
