@@ -41,7 +41,7 @@ export const LandingVid = () => {
 	return (
 		<div className="fixed top-0 left-0 landing-page flex justify-center h-svh w-svw -z-50">
 			<div
-				className="fixed top-0 left-0 h-full w-full bg-sky-50 backdrop-blur-lg"
+				className="fixed top-0 left-0 h-full w-full bg-white backdrop-blur-lg"
 				style={{ opacity: coverOpacity }}
 			/>
 			{coverOpacity < 1 && (
