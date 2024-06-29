@@ -40,7 +40,7 @@ export const NavBar = () => {
 				{/* TODO Fills width on mobile */}
 				<a
 					href="#landing-page"
-					className="h-auto w-full max-w-28"
+					className="h-auto max-w-28"
 					onClick={() => setActiveLink("")}
 				>
 					<img src={"/NeoCellLogo.png"} className="" />
