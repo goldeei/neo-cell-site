@@ -1,4 +1,4 @@
-import cn from '@/utilities/cn';
+import cn from "@/utilities/cn";
 
 const TEXT_CLASSES = {
 	container: "w-full flex flex-col gap-4 lg:gap-8 justify-center items-center",
@@ -18,13 +18,19 @@ const TEXT_CLASSES = {
 	},
 };
 
+const CONTAINER_CLASSES = "h-svh w-full overflow-x-hidden";
+
 const LandingPage = () => {
 	const { title, subtitle } = TEXT_CLASSES;
 
 	return (
 		<section
 			id="landing-page"
-			className={cn(TEXT_CLASSES.container, TEXT_CLASSES.base)}
+			className={cn(
+				TEXT_CLASSES.container,
+				TEXT_CLASSES.base,
+				CONTAINER_CLASSES
+			)}
 		>
 			<div
 				className={cn(title.base, title.default, title.sm, title.md, title.lg)}
