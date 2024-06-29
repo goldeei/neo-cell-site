@@ -58,6 +58,8 @@ export const LandingVid = () => {
 						x: translateX,
 					}}
 					ref={videoRef}
+					controls={false}
+					playsInline
 				>
 					<source src="/NeoCellLandingPage.mp4" type="video/mp4" />
 				</motion.video>
