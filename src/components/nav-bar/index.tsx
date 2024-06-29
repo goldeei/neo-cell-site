@@ -1,14 +1,15 @@
 "use client";
 
-import cn from '@/utilities/cn';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { AnimatePresence, motion } from 'framer-motion';
-import { useEffect, useState } from 'react';
-import { useWindowSize } from 'usehooks-ts';
+import { navbarHeight } from "@/global-styles";
+import cn from "@/utilities/cn";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { AnimatePresence, motion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import { useOnClickOutside, useWindowSize } from "usehooks-ts";
 
-import { NavItem } from './NavItem';
-import { SectionId } from './types';
+import { NavItem } from "./NavItem";
+import { SectionId } from "./types";
 
 const BACKGROUND_CLASSES =
 	"border-white bg-gradient-to-b from-white/80 to-white/60 backdrop-blur-sm";
@@ -18,6 +19,7 @@ const NAV_MENU_CLASSES = {
 		"w-full sm:w-72 flex-1 bg-white fixed right-0 top-full flex-col gap-12 rounded justify-between px-8 py-8 mt-1 me-0 sm:me-1 shadow-lg"
 	),
 };
+
 interface NavMenuProps {
 	setActiveLink: (linkName: SectionId) => void;
 	activeLink: SectionId;
@@ -28,6 +30,15 @@ const NavMenu = ({ setActiveLink, activeLink }: NavMenuProps) => {
 	const handleSetVisible = () => {
 		setIsVisible(!isVisible);
 	};
+
+	const handleClickOutside = () => {
+		if (isVisible) {
+			setIsVisible(false);
+		}
+	};
+
+	const ref = useRef<HTMLDivElement>(null);
+	useOnClickOutside(ref, handleClickOutside);
 
 	const { width } = useWindowSize();
 	useEffect(() => {
@@ -40,7 +51,8 @@ const NavMenu = ({ setActiveLink, activeLink }: NavMenuProps) => {
 		}
 	}, [width]);
 	return (
-		<>
+		<div ref={ref}>
+			{/* TODO hamburger appears in weird spot, then adjust position */}
 			{isCollapsed && (
 				<button
 					onMouseDown={handleSetVisible}
@@ -105,9 +117,11 @@ const NavMenu = ({ setActiveLink, activeLink }: NavMenuProps) => {
 					</motion.ul>
 				) : null}
 			</AnimatePresence>
-		</>
+		</div>
 	);
 };
+
+const navHeight = cn(`h-16`);
 
 export const NavBar = () => {
 	const [activeLink, setActiveLink] = useState<SectionId>("");
@@ -119,17 +133,23 @@ export const NavBar = () => {
 	return (
 		<nav
 			className={cn(
-				"sticky top-0 z-50 shadow-lg border w-full px-4 py-2",
+				"sticky top-0 z-50 shadow-lg border w-full px-4",
 				BACKGROUND_CLASSES
 			)}
 		>
-			<div className="relative page-width h-14 mx-auto flex justify-between items-center">
+			<div
+				className={cn(
+					"relative page-width mx-auto flex justify-between items-center",
+					navHeight
+				)}
+			>
+				{/* TODO Fills width on mobile */}
 				<a
 					href="#landing-page"
-					className="h-full w-fit"
+					className="h-auto w-full max-w-28"
 					onClick={() => setActiveLink("")}
 				>
-					<img src={"/NeoCellLogo.png"} className="h-full w-full" />
+					<img src={"/NeoCellLogo.png"} className="" />
 				</a>
 				<NavMenu
 					setActiveLink={handleActiveLinkChange}
