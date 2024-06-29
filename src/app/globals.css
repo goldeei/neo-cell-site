@@ -6,23 +6,6 @@ html {
 	scroll-behavior: smooth;
 }
 
-section {
-	height: 100svh;
-	width: 100%;
-	overflow-x: hidden;
-}
-
-section:not(#landing-page) {
-	display: flex;
-	justify-content: center;
-}
-section:not(#landing-page) > div {
-	max-width: 1920px;
-	padding: 0 2rem;
-	width: 100%;
-	overflow: hidden;
-}
-
 @layer utilities {
 	.text-balance {
 		text-wrap: balance;
