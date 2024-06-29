@@ -1,1 +1,3 @@
-export { Technology } from "./page";
+import Technology from './page';
+
+export { Technology as default };

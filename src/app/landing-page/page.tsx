@@ -18,7 +18,7 @@ const TEXT_CLASSES = {
 	},
 };
 
-export const LandingPage = () => {
+const LandingPage = () => {
 	const { title, subtitle } = TEXT_CLASSES;
 
 	return (
@@ -39,3 +39,5 @@ export const LandingPage = () => {
 		</section>
 	);
 };
+
+export default LandingPage;

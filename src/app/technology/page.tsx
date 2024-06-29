@@ -23,10 +23,12 @@ const Hexagon = ({
 	);
 };
 
-export const Technology = () => {
+const Technology = () => {
 	return (
 		<motion.section id="technology" className=" flex justify-around">
 			<div className="max-w-svw flex flex-col  justify-around"></div>
 		</motion.section>
 	);
 };
+
+export default Technology;

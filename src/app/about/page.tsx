@@ -1,7 +1,7 @@
 import { HexagonInfo } from '@/components/HexagonInfo';
 import BeakerIcon from '@/components/svg-components/Beaker';
 
-export const About = () => {
+const About = () => {
 	return (
 		<section id="about" className="page-gradient">
 			{/* <div className="flex flex-col md:flex-row items-center justify-around gap-24"> */}
@@ -42,3 +42,5 @@ export const About = () => {
 		</section>
 	);
 };
+
+export default About;
