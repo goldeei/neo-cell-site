@@ -1,7 +1,7 @@
-import cn from '@/utilities/cn';
+import cn from "@/utilities/cn";
 
-import { ActiveIndicator } from './ActiveIndicator';
-import { SectionId } from './types';
+import { ActiveIndicator } from "./ActiveIndicator";
+import { SectionId } from "./types";
 
 interface NavItemProps {
 	link: SectionId;
