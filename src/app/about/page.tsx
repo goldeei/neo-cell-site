@@ -9,7 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const About = () => {
 	return (
-		<Section id="about" className="page-gradient">
+		<Section id="about" className="page-gradient shadow">
 			<div className="h-full gap-20 flex flex-col justify-center lg:justify-between lg:items-around lg:grid lg:gap-auto lg:grid-cols-6 lg:grid-rows-1">
 				<div className="gap-6 lg:col-span-4 flex flex-col justify-center lg:gap-12">
 					<div className="text-header-blue-500 text-3xl md:text-5xl xl:text-6xl leading-tight font-medium tracking-tight">
