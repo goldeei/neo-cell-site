@@ -18,7 +18,7 @@ export const LandingVid = () => {
 	const videoRef = useRef<HTMLVideoElement>(null);
 
 	useMotionValueEvent(scrollYProgress, "change", (latest): void => {
-		setOpacityByScroll(latest);
+		setOpacityByScroll(latest * 2);
 	});
 
 	useEffect(() => {
