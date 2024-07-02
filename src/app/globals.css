@@ -39,8 +39,15 @@ html {
 	background-image: linear-gradient(
 		to top,
 		#d5e7ff 25%,
-		rgba(255, 255, 255) 80%,
-		rgba(255, 255, 255, 0) 100%
+		rgba(255, 255, 255) 100%
+	);
+}
+
+.page-gradient__flipped {
+	background-image: linear-gradient(
+		to bottom,
+		#d5e7ff 25%,
+		rgba(255, 255, 255) 100%
 	);
 }
 
