@@ -10,12 +10,12 @@ const CONTAINER_CLASSES = cn(
 
 interface SectionProps {
 	children: React.ReactNode;
-	className: string;
+	className?: string;
 	id: string;
 }
 export const Section = ({ children, className, id }: SectionProps) => {
 	return (
-		<section id={id} className={cn(className, SECTION_CLASSES)}>
+		<section id={id} className={cn(SECTION_CLASSES, className)}>
 			<div className={CONTAINER_CLASSES}>{children}</div>
 		</section>
 	);
