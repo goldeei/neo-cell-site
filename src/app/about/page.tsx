@@ -1,6 +1,11 @@
 import { HexagonInfo } from "@/components/HexagonInfo";
 import { Section } from "@/components/section";
-import BeakerIcon from "@/components/svg-components/Beaker";
+import {
+	faDna,
+	faFlask,
+	faMicroscope,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const About = () => {
 	return (
@@ -28,15 +33,30 @@ const About = () => {
 					</div>
 				</div>
 				<div className="col-span-2 flex justify-center items-center lg:justify-end">
-					<div className=" lg:w-3/4 lg:max-w-[276px] items-center grid gap-4 grid-cols-3 lg:grid-cols-1 lg:grid-rows-3 lg:col-start-6">
+					<div className="max-w-[600px] lg:w-3/4 lg:max-w-[276px] items-center grid gap-4 grid-cols-3 lg:grid-cols-1 lg:grid-rows-3 lg:col-start-6">
 						<div className=" lg:-translate-x-1/2 lg:translate-y-1/4">
-							<HexagonInfo icon={<BeakerIcon />} />
+							<HexagonInfo
+								icon={
+									<FontAwesomeIcon
+										icon={faMicroscope}
+										className="w-full h-full"
+									/>
+								}
+							/>
 						</div>
 						<div>
-							<HexagonInfo icon={<BeakerIcon />} />
+							<HexagonInfo
+								icon={
+									<FontAwesomeIcon icon={faDna} className="w-full h-full" />
+								}
+							/>
 						</div>
 						<div className=" lg:-translate-x-1/2 lg:-translate-y-1/4">
-							<HexagonInfo icon={<BeakerIcon />} />
+							<HexagonInfo
+								icon={
+									<FontAwesomeIcon icon={faFlask} className="w-full h-full" />
+								}
+							/>
 						</div>
 					</div>
 				</div>
