@@ -1,8 +1,8 @@
 "use client";
 
-import { motion, useMotionValueEvent, useScroll } from 'framer-motion';
-import { useEffect, useRef, useState } from 'react';
-import { useWindowSize } from 'usehooks-ts';
+import { motion, useMotionValueEvent, useScroll } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import { useWindowSize } from "usehooks-ts";
 
 const setOpacity = (opac1: number, opac2: number) => Math.max(opac1, opac2);
 
@@ -18,8 +18,7 @@ export const LandingVid = () => {
 	const videoRef = useRef<HTMLVideoElement>(null);
 
 	useMotionValueEvent(scrollYProgress, "change", (latest): void => {
-		const opacity = latest * 2 + 0.1;
-		setOpacityByScroll(opacity);
+		setOpacityByScroll(latest);
 	});
 
 	useEffect(() => {
