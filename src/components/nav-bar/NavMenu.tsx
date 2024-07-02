@@ -142,12 +142,17 @@ export const NavMenu = ({ setActiveLink, activeLink }: NavMenuProps) => {
 		return null;
 	}
 
+	const handleLinkChange = (linkName: SectionId) => {
+		setActiveLink(linkName);
+		setIsVisible(false);
+	};
+
 	return (
 		<div ref={ref} className="w-fit relative">
 			<MenuState
 				isCollapsed={isCollapsed}
 				isVisible={isVisible}
-				setActiveLink={setActiveLink}
+				setActiveLink={handleLinkChange}
 				handleSetVisible={handleToggleVisible}
 				activeLink={activeLink}
 			/>
