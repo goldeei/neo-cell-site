@@ -28,7 +28,7 @@ const About = () => {
 					</div>
 				</div>
 				<div className="col-span-2 flex justify-center items-center lg:justify-end">
-					<div className=" lg:w-3/4 items-center grid gap-4 grid-cols-3 lg:grid-cols-1 lg:grid-rows-3 lg:col-start-6">
+					<div className=" lg:w-3/4 lg:max-w-[276px] items-center grid gap-4 grid-cols-3 lg:grid-cols-1 lg:grid-rows-3 lg:col-start-6">
 						<div className=" lg:-translate-x-1/2 lg:translate-y-1/4">
 							<HexagonInfo icon={<BeakerIcon />} />
 						</div>
