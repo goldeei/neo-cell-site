@@ -1,5 +1,3 @@
-"use client";
-
 import cn from "@/utilities/cn";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -122,6 +120,7 @@ interface NavMenuProps {
 }
 export const NavMenu = ({ setActiveLink, activeLink }: NavMenuProps) => {
 	const [isVisible, setIsVisible] = useState(false);
+	const [mounted, setMounted] = useState(false);
 
 	const handleToggleVisible = () => setIsVisible(!isVisible);
 	const handleClickOutside = () => isVisible && setIsVisible(false);
@@ -136,7 +135,12 @@ export const NavMenu = ({ setActiveLink, activeLink }: NavMenuProps) => {
 		if (isCollapsed) {
 			setIsVisible(false);
 		}
+		setMounted(true);
 	}, [isCollapsed]);
+
+	if (!mounted) {
+		return null;
+	}
 
 	return (
 		<div ref={ref} className="w-fit relative">
