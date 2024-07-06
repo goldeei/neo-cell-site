@@ -3,8 +3,7 @@ import cn from "@/utilities/cn";
 
 const marginTop = `my-${navbarHeight + 4}`;
 
-const SECTION_CLASSES =
-	"h-fit sm:h-svh w-full overflow-hidden flex justify-center";
+const SECTION_CLASSES = "h-svh w-full overflow-hidden flex justify-center";
 const CONTAINER_CLASSES = cn(
 	`max-w-[1920px] pt-24 pb-6 mb-4 h-full px-4 sm:px-8 md:px-12 xl:px-24`
 );

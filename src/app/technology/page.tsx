@@ -1,9 +1,7 @@
 "use client";
 
+import { H2, H3 } from "@/components/Header";
 import { Section } from "@/components/section";
-import SvgHexCells from "@/components/svg-components/HexCells";
-import cn from "@/utilities/cn";
-import { motion } from "framer-motion";
 
 const Technology = () => {
 	return (
@@ -11,11 +9,9 @@ const Technology = () => {
 			id="technology"
 			className="h-fit min-h-svh flex items-center page-gradient__flipped"
 		>
-			<div className="grid grid-cols-1 gap-12 md:grid-cols-6 items-center">
+			<div className="h-full grid grid-cols-1 gap-y-12 gap-x-12 md:grid-cols-6 items-center">
 				<div className="flex flex-col md:col-span-3">
-					<div className="mb-6 text-3xl text-header-blue-500">
-						SCIENCE HEADER
-					</div>
+					<H2 className="mb-6 font-medium">Technology</H2>
 					<div className="flex flex-col gap-3 text-xl">
 						<div>
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -37,7 +33,7 @@ const Technology = () => {
 					className="rounded h-auto w-full max-w-[600px] md:col-span-3 mx-auto"
 				/>
 				<div className="md:col-span-2 flex flex-col gap-3">
-					<div className="text-xl">BLURB 1</div>
+					<H3>Blurb 1</H3>
 					<div className="text-lg">
 						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore
 						quae ab doloribus dolores ad quis expedita temporibus nesciunt
@@ -46,7 +42,7 @@ const Technology = () => {
 					</div>
 				</div>
 				<div className="md:col-span-2 flex flex-col gap-3">
-					<div className="text-xl">BLURB 1</div>
+					<H3 className="text-xl">Blurb 2</H3>
 					<div className="text-lg">
 						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore
 						quae ab doloribus dolores ad quis expedita temporibus nesciunt
@@ -55,7 +51,7 @@ const Technology = () => {
 					</div>
 				</div>
 				<div className="md:col-span-2 flex flex-col gap-3">
-					<div className="text-xl">BLURB 1</div>
+					<H3 className="text-xl">Blurb 3</H3>
 					<div className="text-lg">
 						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore
 						quae ab doloribus dolores ad quis expedita temporibus nesciunt
