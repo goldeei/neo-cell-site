@@ -15,8 +15,8 @@ interface SectionProps {
 }
 export const Section = ({ children, className, id }: SectionProps) => {
 	return (
-		<section id={id} className={cn(SECTION_CLASSES, className)}>
-			<div className={CONTAINER_CLASSES}>{children}</div>
+		<section id={id} className={cn(SECTION_CLASSES)}>
+			<div className={cn(CONTAINER_CLASSES, className)}>{children}</div>
 		</section>
 	);
 };
