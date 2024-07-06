@@ -1,9 +1,10 @@
-import { LandingVid } from '@/components/landing-vid';
-import { NavBar } from '@/components/nav-bar';
+import { LandingVid } from "@/components/landing-vid";
+import { NavBar } from "@/components/nav-bar";
 
-import About from './about';
-import LandingPage from './landing-page';
-import Technology from './technology';
+import About from "./about";
+import LandingPage from "./landing-page";
+import Team from "./team";
+import Technology from "./technology";
 
 export default function Home() {
 	return (
@@ -13,6 +14,7 @@ export default function Home() {
 			<LandingPage />
 			<About />
 			<Technology />
+			<Team />
 		</div>
 	);
 }
