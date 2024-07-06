@@ -5,7 +5,7 @@ const Team = () => {
 	return (
 		<Section
 			id="meet-the-team"
-			className="h-full w-full grid grid-cols-3 items-center bg-sky-500 gap-24"
+			className="h-full w-full grid grid-cols-1 lg:grid-cols-3 items-center bg-[#A0C8EE] gap-24"
 		>
 			<TeamMember
 				image="/YanivHeadshot.png"
