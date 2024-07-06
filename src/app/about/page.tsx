@@ -1,4 +1,4 @@
-import { H1, H2 } from "@/components/Header";
+import { H2 } from "@/components/Header";
 import { HexagonInfo } from "@/components/HexagonInfo";
 import { Section } from "@/components/section";
 import {
@@ -16,7 +16,7 @@ const About = () => {
 					<H2 className="max-w-[600px] font-medium">
 						Revolutionizing Cell Therapy Monitoring & Analysis
 					</H2>
-					<div className="text-lg sm:text-xl lg:text-2xl xl:text-2xl 2xl:text-3xl flex flex-col gap-4 font-light leading-snug">
+					<div className="text-xl lg:text-2xl xl:text-2xl 2xl:text-3xl flex flex-col gap-4 font-light leading-snug">
 						<div>
 							By leveraging PET reporter technology, our innovative approach
 							enables early detection of low efficacy or high toxicity
