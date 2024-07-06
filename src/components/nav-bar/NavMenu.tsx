@@ -97,20 +97,25 @@ type MenuStateProps = LinkListProps & {
 	handleSetVisible: () => void;
 };
 const MenuState = ({ isCollapsed, isVisible, ...props }: MenuStateProps) => {
-	if (isCollapsed && !isVisible)
-		return (
-			<MenuToggle
-				handleSetVisible={props.handleSetVisible}
-				isVisible={isVisible}
-			/>
-		);
-
 	return (
-		<LinkList
-			isCollapsed={isCollapsed}
-			setActiveLink={props.setActiveLink}
-			activeLink={props.activeLink}
-		/>
+		<>
+			<AnimatePresence mode="wait">
+				{isCollapsed && !isVisible ? (
+					<MenuToggle
+						key="menu-toggle"
+						handleSetVisible={props.handleSetVisible}
+						isVisible={isVisible}
+					/>
+				) : (
+					<LinkList
+						key="link-list"
+						isCollapsed={isCollapsed}
+						setActiveLink={props.setActiveLink}
+						activeLink={props.activeLink}
+					/>
+				)}
+			</AnimatePresence>
+		</>
 	);
 };
 
@@ -143,8 +148,10 @@ export const NavMenu = ({ setActiveLink, activeLink }: NavMenuProps) => {
 	}
 
 	const handleLinkChange = (linkName: SectionId) => {
+		if (isCollapsed) {
+			setIsVisible(false);
+		}
 		setActiveLink(linkName);
-		setIsVisible(false);
 	};
 
 	return (
