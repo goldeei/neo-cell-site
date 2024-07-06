@@ -24,7 +24,7 @@ export const NavBar = () => {
 	return (
 		<nav
 			className={cn(
-				"sticky top-0 z-50 shadow-lg border w-full px-4",
+				"sticky top-0 z-50 shadow-lg border w-full px-4 sm:px-8 md:px-12 xl:px-24",
 				BACKGROUND_CLASSES
 			)}
 		>
