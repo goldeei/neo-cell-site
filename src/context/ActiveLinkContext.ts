@@ -1,3 +1,5 @@
+"use client";
+
 import { SectionIdOptions } from "@/types";
 import { createContext } from "react";
 
