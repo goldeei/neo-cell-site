@@ -1,7 +1,8 @@
 "use client";
 
+import { ActiveLinkContext } from "@/context/ActiveLinkContext";
 import cn from "@/utilities/cn";
-import { useState } from "react";
+import { useContext, useState } from "react";
 
 import { NavMenu } from "./NavMenu";
 import { SectionId } from "./types";
@@ -12,7 +13,9 @@ const BACKGROUND_CLASSES =
 const navHeight = cn(`h-16`);
 
 export const NavBar = () => {
-	const [activeLink, setActiveLink] = useState<SectionId>("");
+	// const [activeLink, setActiveLink] = useState<SectionId>("");
+
+	const [activeLink, setActiveLink] = useContext(ActiveLinkContext)!;
 
 	const handleActiveLinkChange = (linkName: SectionId) => {
 		setActiveLink(linkName);
