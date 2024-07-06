@@ -1,7 +1,8 @@
 "use client";
 
-import { ActiveLinkContext } from "@/context/ActiveLinkContext";
+import { ActiveLinkContext } from "@/context/ActiveLinkProvider";
 import cn from "@/utilities/cn";
+import Image from "next/image";
 import { useContext, useState } from "react";
 
 import { NavMenu } from "./NavMenu";
@@ -34,13 +35,12 @@ export const NavBar = () => {
 					navHeight
 				)}
 			>
-				{/* TODO Fills width on mobile */}
 				<a
 					href="#landing-page"
 					className="h-auto max-w-28"
 					onClick={() => setActiveLink("")}
 				>
-					<img src={"/NeoCellLogo.png"} className="" />
+					<Image alt="NellCell Logo" src={"/NeoCellLogo.png"} className="" />
 				</a>
 				<NavMenu
 					setActiveLink={handleActiveLinkChange}

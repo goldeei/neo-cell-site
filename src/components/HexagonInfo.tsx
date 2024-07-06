@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface HexagonInfoProps {
 	icon: React.ReactNode;
 }
@@ -6,7 +8,7 @@ export const HexagonInfo = ({ icon }: HexagonInfoProps) => {
 	return (
 		<div className="flex justify-end items-center">
 			<div className="relative">
-				<img
+				<Image
 					src="/Hexagon.png"
 					alt=""
 					className="w-full max-w-60 h-auto aspect-auto"

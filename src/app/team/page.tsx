@@ -1,4 +1,6 @@
-import { H1, H2 } from "@/components/Header";
+"use client";
+
+import { H1 } from "@/components/Header";
 import { Section } from "@/components/section";
 import { TeamMember } from "@/components/team-member";
 

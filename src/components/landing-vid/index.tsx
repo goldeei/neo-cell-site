@@ -30,7 +30,7 @@ export const LandingVid = () => {
 		} else {
 			setTranslateX(0);
 		}
-	}, [width, videoRef.current]);
+	}, [width, translateX]);
 
 	useEffect(() => {
 		const maxOpacity = Math.max(opacityByWidth, opacityByScroll);

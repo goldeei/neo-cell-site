@@ -2,6 +2,7 @@
 
 import { H2, H3 } from "@/components/Header";
 import { Section } from "@/components/section";
+import Image from "next/image";
 
 const Technology = () => {
 	return (
@@ -28,7 +29,7 @@ const Technology = () => {
 						</div>
 					</div>
 				</div>
-				<img
+				<Image
 					src="/LabTests.jpg"
 					alt=""
 					className="rounded h-auto w-full max-w-[600px] md:col-span-1 mx-auto"
