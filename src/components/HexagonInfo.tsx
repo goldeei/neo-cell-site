@@ -8,7 +8,7 @@ export const HexagonInfo = ({ icon }: HexagonInfoProps) => {
 	return (
 		<div className="flex justify-end items-center">
 			<div className="relative">
-				<Image
+				<img
 					src="/Hexagon.png"
 					alt=""
 					className="w-full max-w-60 h-auto aspect-auto"

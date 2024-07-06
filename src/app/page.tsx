@@ -6,7 +6,7 @@ import { ActiveLinkProvider } from "@/context/ActiveLinkProvider";
 
 import About from "./about";
 import LandingPage from "./landing-page";
-// import Team from "./team";
+import Team from "./team";
 import Technology from "./technology";
 
 export default function Home() {
@@ -18,7 +18,7 @@ export default function Home() {
 				<LandingPage />
 				<About />
 				<Technology />
-				{/* <Team /> */}
+				<Team />
 			</ActiveLinkProvider>
 		</div>
 	);

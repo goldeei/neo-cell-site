@@ -29,7 +29,7 @@ const Technology = () => {
 						</div>
 					</div>
 				</div>
-				<Image
+				<img
 					src="/LabTests.jpg"
 					alt=""
 					className="rounded h-auto w-full max-w-[600px] md:col-span-1 mx-auto"

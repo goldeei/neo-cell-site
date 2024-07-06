@@ -40,7 +40,7 @@ export const NavBar = () => {
 					className="h-auto max-w-28"
 					onClick={() => setActiveLink("")}
 				>
-					<Image alt="NellCell Logo" src={"/NeoCellLogo.png"} className="" />
+					<img alt="NellCell Logo" src={"/NeoCellLogo.png"} />
 				</a>
 				<NavMenu
 					setActiveLink={handleActiveLinkChange}

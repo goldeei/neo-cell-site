@@ -19,7 +19,7 @@ export const TeamMember = ({
 	return (
 		<div className="relative h-full w-full max-w-[400px] flex flex-col place-self-center border border-white/40 bg-gradient-to-b from-white/40 to-white/20 backdrop-blur-sm px-6 py-12 shadow-xl rounded-lg">
 			<div className="flex-1 w-full h-full flex justify-center">
-				<Image
+				<img
 					src={image}
 					alt={`${name} Headshot`}
 					className="object-cover w-full h-full rounded shadow border border-black/10"
